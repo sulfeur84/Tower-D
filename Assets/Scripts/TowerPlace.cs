@@ -19,8 +19,11 @@ public class TowerPlace : MonoBehaviour
             {
                 Vector3 ff = new Vector3(hit.point.x, hit.point.y + 1, hit.point.z);
                 Instantiate(Prefab,ff,Quaternion.identity); 
+                
                 B.Tour1.gameObject.SetActive(false);
                 B.Tour2.gameObject.SetActive(false);
+                B.Cube.gameObject.SetActive(false);
+                B.Cylind.gameObject.SetActive(false);
             }
 
         }
