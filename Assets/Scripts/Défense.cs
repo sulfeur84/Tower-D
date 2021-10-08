@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Défense : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class Défense : MonoBehaviour
 
     public void Update()
     {
-        if(IsDead) Destroy(gameObject);
+        if(IsDead) SceneManager.LoadScene("GameOver");
     }
 
     public bool IsDead { get; set; }
