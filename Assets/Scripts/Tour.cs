@@ -9,6 +9,7 @@ public class Tour : MonoBehaviour
     public float StartTime = 1.0f;
     public float RepeatTime = 1.0f;
     public bool TimeEnd;
+    public ParticleSystem Boom;
  
     public void Update(){
  
@@ -27,6 +28,7 @@ public class Tour : MonoBehaviour
         if (other.CompareTag("Ennemy") && TimeEnd)
         {
             other.GetComponent<Ennemy>().Health -= Degats;
+            Boom.Play();
             StartTime = RepeatTime;
         }
     }

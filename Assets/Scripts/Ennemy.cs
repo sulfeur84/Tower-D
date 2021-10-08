@@ -7,7 +7,14 @@ using UnityEngine.AI;
 public class Ennemy : MonoBehaviour
 {
     public int Degats = 1;
-    
+
+    public static List<Ennemy> ennemy = new List<Ennemy>();
+
+    public void Awake()
+    {
+        ennemy.Add(this);
+    }
+
     public void Start()
     {
         _maxHealth = Health;
