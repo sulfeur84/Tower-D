@@ -1,13 +1,18 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BoutonTour : MonoBehaviour
 {
     public GameObject Tour1;
     public GameObject Tour2;
 
-    public int Argent = 2;
+    public Text ArgentDisplay;
+    
+    public static int Argent = 2;
     public static bool OnPlace = false;
 
     public GameObject Cylind, Cube;
@@ -39,5 +44,10 @@ public class BoutonTour : MonoBehaviour
             Argent -= 1;
         }
         
+    }
+
+    private void Update()
+    {
+        ArgentDisplay.text = Argent.ToString();
     }
 }

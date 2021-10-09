@@ -7,6 +7,7 @@ using UnityEngine.AI;
 public class Ennemy : MonoBehaviour
 {
     public int Degats = 1;
+    public int Prix = 2;
 
     public static List<Ennemy> ennemy = new List<Ennemy>();
 
@@ -24,7 +25,11 @@ public class Ennemy : MonoBehaviour
     {
         NavMeshAgent agent = GetComponent<NavMeshAgent>();
         agent.destination = GameObject.FindWithTag("Défense").transform.position;
-        if(IsDead) Destroy(gameObject);
+        if (IsDead)
+        {
+            BoutonTour.Argent += Prix;
+            Destroy(gameObject);
+        }
     }
 
     public void OnTriggerEnter(Collider other)
