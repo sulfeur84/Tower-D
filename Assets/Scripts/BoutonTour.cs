@@ -7,23 +7,37 @@ public class BoutonTour : MonoBehaviour
     public GameObject Tour1;
     public GameObject Tour2;
 
+    public int Argent = 2;
+    public static bool OnPlace = false;
+
     public GameObject Cylind, Cube;
 
     public void TourBoom()
     {
-        Tour1.gameObject.SetActive(true);
-        Tour2.gameObject.SetActive(false);
+        if (Argent >= 2 && !OnPlace)
+        {
+            OnPlace = true;
+            Tour1.gameObject.SetActive(true);
+            Tour2.gameObject.SetActive(false);
+                    
+            Cylind.gameObject.SetActive(true);
+            Cube.gameObject.SetActive(false);
+            Argent -= 2;
+        }
         
-        Cylind.gameObject.SetActive(true);
-        Cube.gameObject.SetActive(false);
     }
 
     public void TourPiou()
     {
-        Tour1.gameObject.SetActive(false);
-        Tour2.gameObject.SetActive(true);
+        if (Argent >= 1 && !OnPlace)
+        {
+            OnPlace = true;
+            Tour1.gameObject.SetActive(false);
+            Tour2.gameObject.SetActive(true);
+            Cylind.gameObject.SetActive(false); 
+            Cube.gameObject.SetActive(true);
+            Argent -= 1;
+        }
         
-        Cylind.gameObject.SetActive(false);
-        Cube.gameObject.SetActive(true);
     }
 }

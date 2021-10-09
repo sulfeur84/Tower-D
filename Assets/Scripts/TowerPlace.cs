@@ -18,8 +18,9 @@ public class TowerPlace : MonoBehaviour
             if(Physics.Raycast(ray,out hit) && hit.transform.tag == "Sol")
             {
                 Vector3 ff = new Vector3(hit.point.x, hit.point.y + 1, hit.point.z);
-                Instantiate(Prefab,ff,Quaternion.identity); 
-                
+                Instantiate(Prefab,ff,Quaternion.identity);
+
+                BoutonTour.OnPlace = false;
                 B.Tour1.gameObject.SetActive(false);
                 B.Tour2.gameObject.SetActive(false);
                 B.Cube.gameObject.SetActive(false);
