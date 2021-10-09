@@ -7,7 +7,7 @@ public class Spawner : MonoBehaviour
     public GameObject Ennemy;
     
     public float StartTime = 1.0f;
-    public float RepeatTime = 1.0f;
+    public float TimeMin, TimeMax;
  
     public void Update(){
  
@@ -22,6 +22,6 @@ public class Spawner : MonoBehaviour
     void timerEnded()
     {
         Instantiate(Ennemy, transform.position,transform.rotation);
-        StartTime = RepeatTime;
+        StartTime = Random.Range(TimeMin, TimeMax);
     }
 }

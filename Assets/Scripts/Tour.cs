@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Tour : MonoBehaviour
 {
-    public int Degats = 1;
+    public float Degats = 1f;
     public float StartTime = 1.0f;
     public float RepeatTime = 1.0f;
     public bool TimeEnd;

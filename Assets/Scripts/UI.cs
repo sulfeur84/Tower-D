@@ -13,6 +13,17 @@ public class UI : MonoBehaviour
         Invoke("LoadScene", 2f);
     }
 
+    public void QuitGame()
+    {
+        Cam.SetTrigger("Start");
+        Invoke("Quit", 1.5f);
+    }
+
+    void Quit()
+    {
+        Application.Quit();
+    }
+
     void LoadScene()
     {
         SceneManager.LoadScene("SampleScene");

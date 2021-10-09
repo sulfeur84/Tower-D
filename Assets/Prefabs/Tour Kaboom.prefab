@@ -4815,9 +4815,7 @@ GameObject:
   - component: {fileID: 4086910415418576069}
   - component: {fileID: 4086910415418576068}
   - component: {fileID: 4086910415418576071}
-  - component: {fileID: 4086910415418576070}
   - component: {fileID: 4856045573225062883}
-  - component: {fileID: 7350449132944695864}
   - component: {fileID: 2809515613194179287}
   m_Layer: 0
   m_Name: Tour Kaboom
@@ -4870,7 +4868,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 18da7210779abb1429516faa3d0252e0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4892,20 +4890,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &4086910415418576070
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4086910415418576064}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!135 &4856045573225062883
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4919,22 +4903,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 3
   m_Center: {x: 0, y: -1, z: 0}
---- !u!208 &7350449132944695864
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4086910415418576064}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 0
-  m_Extents: {x: 0.2, y: 1, z: 0.2}
-  m_MoveThreshold: 0.1
-  m_Carve: 1
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!114 &2809515613194179287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5259,7 +5227,7 @@ ParticleSystem:
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 0, b: 0, a: 1}
-        key1: {r: 0, g: 0, b: 0, a: 1}
+        key1: {r: 1, g: 1, b: 1, a: 1}
         key2: {r: 0, g: 1, b: 0.06752968, a: 0}
         key3: {r: 0, g: 1, b: 0.06752968, a: 0}
         key4: {r: 0, g: 1, b: 0.06752968, a: 0}

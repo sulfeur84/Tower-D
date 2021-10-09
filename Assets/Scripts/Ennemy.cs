@@ -30,6 +30,7 @@ public class Ennemy : MonoBehaviour
             BoutonTour.Argent += Prix;
             Destroy(gameObject);
         }
+        if (IsDead && Prix == 50) Debug.Log("yes");
     }
 
     public void OnTriggerEnter(Collider other)
@@ -42,10 +43,10 @@ public class Ennemy : MonoBehaviour
         }
     }
     public bool IsDead { get; set; }
-    public int _health = 1;
+    public float _health = 1;
     private float _maxHealth;
 
-    public int Health
+    public float Health
     {
         get
         {
