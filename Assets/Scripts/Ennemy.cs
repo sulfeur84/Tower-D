@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class Ennemy : MonoBehaviour
 {
@@ -30,7 +31,7 @@ public class Ennemy : MonoBehaviour
             BoutonTour.Argent += Prix;
             Destroy(gameObject);
         }
-        if (IsDead && Prix == 50) Debug.Log("yes");
+        if (IsDead && Prix == 50) SceneManager.LoadScene("Win");
     }
 
     public void OnTriggerEnter(Collider other)

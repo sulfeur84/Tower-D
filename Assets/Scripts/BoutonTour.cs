@@ -12,7 +12,7 @@ public class BoutonTour : MonoBehaviour
 
     public Text ArgentDisplay;
     
-    public static int Argent = 2;
+    public static int Argent = 0;
     public static bool OnPlace = false;
 
     public GameObject Cylind, Cube;

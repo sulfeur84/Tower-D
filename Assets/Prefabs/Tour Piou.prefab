@@ -4916,8 +4916,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Degats: 0.1
-  StartTime: 0.2
-  RepeatTime: 0.2
+  StartTime: 0.5
+  RepeatTime: 0.5
   TimeEnd: 0
   Boom: {fileID: 6480445552188985653}
 --- !u!1 &4790593595087189507

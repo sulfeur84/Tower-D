@@ -26,6 +26,13 @@ public class UI : MonoBehaviour
 
     void LoadScene()
     {
+        BoutonTour.Argent = 2;
+        BoutonTour.OnPlace = false;
         SceneManager.LoadScene("SampleScene");
+    }
+
+    public void LoadMenu()
+    {
+        SceneManager.LoadScene("Menu");
     }
 }
